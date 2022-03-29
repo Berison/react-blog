@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(36, 36, 36);
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px 0;
+  color: #fff;
+}
+
+.blogPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  align-self: center;
+  grid-template-areas: 
+    ". . . ."
+    "twoFr twoFr . ."
+    ". . twoFr1 twoFr1"
+    ". . . .";
+}
+
+.blogPageSingle {
+  background-color: blanchedalmond;
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.blogPageSingle a {
+  margin-top: auto;
+  width: 100%;
+  align-self: flex-end;
+}
+
+.blogPageSingle:nth-child(5) {
+  grid-area: twoFr;
+}
+
+.blogPageSingle:nth-child(10) {
+  grid-area: twoFr1;
+}
